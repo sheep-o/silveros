@@ -19,7 +19,7 @@ namespace SilverOS.Core
 
         protected override void OnLoad(EventArgs e)
         {
-            
+            new Desktop().Show();
             Close();
         }
     }

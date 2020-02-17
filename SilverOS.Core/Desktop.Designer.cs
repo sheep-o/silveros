@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Desktop));
             this.DockTimer = new System.Windows.Forms.Timer(this.components);
             this.dockPanel = new System.Windows.Forms.Panel();
             this.dockTime = new System.Windows.Forms.Label();
@@ -69,7 +68,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.dockPanel);
             this.DoubleBuffered = true;
