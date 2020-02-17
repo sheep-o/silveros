@@ -73,9 +73,12 @@
             this.Controls.Add(this.progressBar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(684, 411);
+            this.MinimumSize = new System.Drawing.Size(684, 411);
             this.Name = "Init";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Init";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

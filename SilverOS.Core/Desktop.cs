@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SilverOS.IO;
 
 namespace SilverOS.Core
 {
@@ -15,7 +16,10 @@ namespace SilverOS.Core
         public Desktop()
         {
             InitializeComponent();
+            fs = new FS();
         }
+
+        private FS fs;
 
         private void DockTimer_Tick(object sender, EventArgs e)
         {

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SilverOS.Core
@@ -20,7 +20,12 @@ namespace SilverOS.Core
         protected override void OnLoad(EventArgs e)
         {
             new Desktop().Show();
-            Close();
+            Hide();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
