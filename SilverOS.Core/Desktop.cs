@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace SilverOS.Core
 {
-    public partial class Init : Form
+    public partial class Desktop : Form
     {
-        public Init()
+        public Desktop()
         {
             InitializeComponent();
         }
 
-        protected override void OnLoad(EventArgs e)
+        private void DockTimer_Tick(object sender, EventArgs e)
         {
-            
-            Close();
+            dockTime.Text = string.Format("{0:HH:mm tt}", DateTime.Now);
         }
     }
 }
