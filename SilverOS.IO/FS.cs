@@ -5,7 +5,7 @@ namespace SilverOS.IO
 {
     public class FS
     {
-        private string systemDirectory = Environment.GetEnvironmentVariable("appdata") + "/SilverOS/drive/";
+        private string systemDirectory = Environment.GetEnvironmentVariable("appdata").Replace("\\", "/") + "/SilverOS/drive/";
 
         public string[] GetFiles(string path)
         {

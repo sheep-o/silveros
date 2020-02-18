@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroSuite 2.0">
-      <HintPath>..\..\..\source\repos\ThunderRBX\Thunder\bin\Debug\MetroSuite 2.0.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\MetroSuite 2.0\MetroSuite 2.0.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

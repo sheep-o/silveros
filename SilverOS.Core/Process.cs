@@ -9,27 +9,30 @@ namespace SilverOS.Core
 {
     public class Process
     {
-        private int processID;
+        private int ID;
         private Form mainForm;
+        private string Name;
 
-        public Process(Form form)
+        public Process(string name, Form form)
         {
+            Name = name;
             mainForm = form;
         }
 
         public void Start()
         {
-            processID = Desktop.GetProcessManager().GetProcesses().Count;
+            ID = Desktop.GetProcessManager().GetProcesses().Count;
             Desktop.GetProcessManager().StartProcess(this);
         }
 
         public void Stop()
         {
             Desktop.GetProcessManager().StopProcess(this);
-            processID = -1;
+            ID = -1;
         }
 
-        public int GetProcessID() { return processID; }
+        public int GetID() { return ID; }
         public Form GetMainForm() { return mainForm; }
+        public string GetName() { return Name; }
     }
 }

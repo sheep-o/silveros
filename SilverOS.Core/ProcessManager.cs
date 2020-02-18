@@ -15,19 +15,22 @@ namespace SilverOS.Core
         {
             this.desktop = desktop;
             processes = new List<Process>();
-            processes.Add(new Process(desktop));
+            processes.Add(new Process("Desktop", desktop));
         }
 
         public void StartProcess(Process process)
         {
             processes.Add(process);
-            process.GetMainForm().TopMost = true;
-            process.GetMainForm().Show(desktop);
+
+            if (process.GetMainForm() != null)
+                process.GetMainForm().Show(desktop); process.GetMainForm().TopMost = true;
         }
 
         public void StopProcess(Process process)
         {
-            process.GetMainForm().Close();
+            if (process.GetMainForm() != null)
+                process.GetMainForm().Close();
+
             processes.Remove(process);
         }
 
@@ -38,7 +41,17 @@ namespace SilverOS.Core
 
         public Process GetProcessById(int id)
         {
-            return processes[id];
+            Process proc;
+            try
+            {
+                proc = processes[id];
+            }
+            catch (Exception)
+            {
+                proc = null;
+            }
+
+            return proc;
         }
     }
 }

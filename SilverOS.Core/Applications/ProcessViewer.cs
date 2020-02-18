@@ -22,7 +22,7 @@ namespace SilverOS.Core
         {
             foreach (Process p in Desktop.GetProcessManager().GetProcesses())
             {
-                processView.Items.Add(new ListViewItem(new string[] { p.GetMainForm().Text, p.GetProcessID().ToString() }));
+                processView.Items.Add(new ListViewItem(new string[] { p.GetName(), p.GetID().ToString() }));
             }
         }
 
@@ -45,7 +45,7 @@ namespace SilverOS.Core
             processView.Items.Clear();
             foreach (Process p in Desktop.GetProcessManager().GetProcesses())
             {
-                processView.Items.Add(new ListViewItem(new string[] { p.GetMainForm().Text, p.GetProcessID().ToString() }));
+                processView.Items.Add(new ListViewItem(new string[] { p.GetName(), p.GetID().ToString() }));
             }
         }
     }
