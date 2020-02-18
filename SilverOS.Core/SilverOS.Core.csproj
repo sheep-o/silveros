@@ -61,8 +61,19 @@
     <Compile Include="Init.Designer.cs">
       <DependentUpon>Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Process.cs" />
+    <Compile Include="ProcessManager.cs" />
+    <Compile Include="Applications\ProcessViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ProcessViewer.Designer.cs">
+      <DependentUpon>ProcessViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Applications\ProcessViewer.resx">
+      <DependentUpon>ProcessViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Desktop.resx">
       <DependentUpon>Desktop.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,8 +113,12 @@
       <Name>SilverOS.UI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

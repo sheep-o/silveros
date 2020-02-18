@@ -22,10 +22,5 @@ namespace SilverOS.Core
             new Desktop().Show();
             Hide();
         }
-
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

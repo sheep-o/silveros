@@ -17,13 +17,28 @@ namespace SilverOS.Core
         {
             InitializeComponent();
             fs = new FS();
+            processManager = new ProcessManager(this);
+
+            Process proc = new Process(new ProcessViewer());
+            proc.Start();
         }
 
-        private FS fs;
+        private static FS fs;
+        private static ProcessManager processManager;
 
         private void DockTimer_Tick(object sender, EventArgs e)
         {
             dockTime.Text = string.Format("{0:HH:mm tt}", DateTime.Now);
+        }
+
+        public static FS GetFileSystem()
+        {
+            return fs;
+        }
+
+        public static ProcessManager GetProcessManager()
+        {
+            return processManager;
         }
     }
 }

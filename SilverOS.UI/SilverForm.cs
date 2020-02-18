@@ -8,7 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Silver_Rewrite
+namespace SilverOS.UI
 {
     public class SilverForm : Form
     {
