@@ -51,8 +51,8 @@
             this.tabControl.AutoStyle = false;
             this.tabControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tabControl.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.tabControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
@@ -77,7 +77,7 @@
             this.tabControl.Size = new System.Drawing.Size(429, 375);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.Style = MetroSuite.Design.Style.Custom;
-            this.tabControl.TabContainerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.tabControl.TabContainerColor = System.Drawing.Color.Transparent;
             this.tabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -211,7 +211,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 49);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(421, 322);
+            this.tabPage2.Size = new System.Drawing.Size(422, 322);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sign In";
             // 

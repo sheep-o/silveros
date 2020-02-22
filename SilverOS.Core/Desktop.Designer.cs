@@ -60,7 +60,7 @@
             // 
             // dockPanel
             // 
-            this.dockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.dockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.dockPanel.Controls.Add(this.startButton);
             this.dockPanel.Controls.Add(this.dockTime);
             this.dockPanel.Controls.Add(this.openFormsPanel);
