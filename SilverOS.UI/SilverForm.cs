@@ -501,10 +501,13 @@ namespace SilverOS.UI
             {
                 if (showMin)
                 {
+                    int x = showMax ? _minButtonBounds.X : _maxButtonBounds.X;
+                    int y = showMax ? _minButtonBounds.Y : _maxButtonBounds.Y;
+
                     if (_buttonState == ButtonState.MinOver)
-                        g.FillEllipse(HOVER_MIN_BUTTON_BRUSH, _minButtonBounds);
+                        g.FillEllipse(HOVER_MIN_BUTTON_BRUSH, x, y, _minButtonBounds.Width, _minButtonBounds.Height);
                     else
-                        g.FillEllipse(MIN_BUTTON_BRUSH, _minButtonBounds);
+                        g.FillEllipse(MIN_BUTTON_BRUSH, x, y, _minButtonBounds.Width, _minButtonBounds.Height);
                 }
 
                 if (showMax)

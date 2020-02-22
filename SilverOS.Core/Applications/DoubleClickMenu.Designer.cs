@@ -34,6 +34,8 @@
             // 
             // btnShutdown
             // 
+            this.btnShutdown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnShutdown.BackColor = System.Drawing.Color.Transparent;
             this.btnShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnShutdown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
@@ -55,6 +57,8 @@
             // 
             // btnRestart
             // 
+            this.btnRestart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestart.BackColor = System.Drawing.Color.Transparent;
             this.btnRestart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRestart.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
@@ -81,7 +85,9 @@
             this.ClientSize = new System.Drawing.Size(273, 91);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnShutdown);
+            this.MaximizeBox = false;
             this.Name = "DoubleClickMenu";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Options";
             this.TopMost = true;
