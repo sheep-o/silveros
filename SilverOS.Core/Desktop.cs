@@ -18,17 +18,17 @@ namespace SilverOS.Core
         public Desktop()
         {
             InitializeComponent();
-            fs = new FS();
+            fs = new Directory();
             processManager = new ProcessManager(this);
-            doubleClickMenu = new DoubleClickMenu();
+            settings = new SystemSettings();
         }
 
         public Dictionary<SilverImageButton, Form> dockForms = new Dictionary<SilverImageButton, Form>();
-        private static FS fs;
+        private static Directory fs;
         private static ProcessManager processManager;
-        private static DoubleClickMenu doubleClickMenu;
+        private static SystemSettings settings;
 
-        public static FS GetFileSystem()
+        public static Directory GetFileSystem()
         {
             return fs;
         }
@@ -36,6 +36,11 @@ namespace SilverOS.Core
         public static ProcessManager GetProcessManager()
         {
             return processManager;
+        }
+
+        public static SystemSettings GetSettings()
+        {
+            return settings;
         }
 
         public void AddToDock(Form form)
@@ -58,6 +63,8 @@ namespace SilverOS.Core
                 Application.Exit();
 
             dockPanel.Show();
+
+            new Process("Files", new Files()).Start();
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)
@@ -73,7 +80,7 @@ namespace SilverOS.Core
 
         private void Desktop_DoubleClick(object sender, EventArgs e)
         {
-            new Applications.DoubleClickMenu().Show(this);
+            new DoubleClickMenu().ShowDialog(this);
         }
     }
 }

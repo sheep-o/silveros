@@ -16,12 +16,12 @@ namespace SilverOS.Core.Lua
 
         private static NLua.Lua L = new NLua.Lua();
 
-        public static void DoString(string script) 
+        public static void LoadString(string script) 
         {
             L.DoString(script);
         }
 
-        public static void DoFile(string path) 
+        public static void LoadFile(string path) 
         {
             L.DoFile(path);
         }
