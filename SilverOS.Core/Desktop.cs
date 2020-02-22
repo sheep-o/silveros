@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SilverOS.IO;
 using SilverOS.UI;
+using SilverOS.Core.Applications;
 
 namespace SilverOS.Core
 {
@@ -19,11 +20,13 @@ namespace SilverOS.Core
             InitializeComponent();
             fs = new FS();
             processManager = new ProcessManager(this);
+            doubleClickMenu = new DoubleClickMenu();
         }
 
         public Dictionary<SilverImageButton, Form> dockForms = new Dictionary<SilverImageButton, Form>();
         private static FS fs;
         private static ProcessManager processManager;
+        private static DoubleClickMenu doubleClickMenu;
 
         public static FS GetFileSystem()
         {
@@ -66,6 +69,11 @@ namespace SilverOS.Core
         private void DockTimer_Tick(object sender, EventArgs e)
         {
             dockTime.Text = string.Format("{0:HH:mm tt}", DateTime.Now);
+        }
+
+        private void Desktop_DoubleClick(object sender, EventArgs e)
+        {
+            new Applications.DoubleClickMenu().Show(this);
         }
     }
 }
