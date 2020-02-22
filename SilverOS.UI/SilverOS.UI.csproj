@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AEF0F246-33C0-43AD-BDB1-19A853326C84}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Silver_Rewrite</RootNamespace>
-    <AssemblyName>Silver_Rewrite</AssemblyName>
+    <RootNamespace>SilverOS.UI</RootNamespace>
+    <AssemblyName>SilverOS.UI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -64,6 +64,12 @@
     <Compile Include="SilverForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SilverImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SilverImageButton.Designer.cs">
+      <DependentUpon>SilverImageButton.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -71,7 +71,7 @@
             this.processView.MultiSelect = false;
             this.processView.Name = "processView";
             this.processView.Size = new System.Drawing.Size(400, 389);
-            this.processView.Sorting = System.Windows.Forms.SortOrder.Descending;
+            this.processView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.processView.TabIndex = 1;
             this.processView.UseCompatibleStateImageBehavior = false;
             this.processView.View = System.Windows.Forms.View.Details;
@@ -112,6 +112,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.processView);
             this.Controls.Add(this.btnEndProcess);
+            this.MinimumSize = new System.Drawing.Size(220, 200);
             this.Name = "ProcessViewer";
             this.Text = "Process Viewer";
             this.Load += new System.EventHandler(this.ProcessViewer_Load);

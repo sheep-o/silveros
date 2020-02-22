@@ -30,11 +30,6 @@ namespace SilverOS.Core
         {
             if (processView.SelectedItems.Count > 0)
             {
-                if (processView.SelectedItems[0].SubItems[1].Text == "0")
-                {
-                    Application.Exit();
-                }
-
                 Process p = Desktop.GetProcessManager().GetProcessById(int.Parse(processView.SelectedItems[0].SubItems[1].Text));
                 p.Stop();
             }

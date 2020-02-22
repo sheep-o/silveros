@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DockTimer = new System.Windows.Forms.Timer(this.components);
-            this.dockPanel = new System.Windows.Forms.Panel();
             this.dockTime = new System.Windows.Forms.Label();
+            this.dockPanel = new System.Windows.Forms.Panel();
+            this.startButton = new SilverOS.UI.SilverImageButton();
+            this.openFormsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.dockPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startButton)).BeginInit();
             this.SuspendLayout();
             // 
             // DockTimer
@@ -41,28 +44,56 @@
             this.DockTimer.Interval = 500;
             this.DockTimer.Tick += new System.EventHandler(this.DockTimer_Tick);
             // 
-            // dockPanel
-            // 
-            this.dockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dockPanel.Controls.Add(this.dockTime);
-            this.dockPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockPanel.Location = new System.Drawing.Point(0, 636);
-            this.dockPanel.Name = "dockPanel";
-            this.dockPanel.Size = new System.Drawing.Size(1264, 45);
-            this.dockPanel.TabIndex = 0;
-            // 
             // dockTime
             // 
             this.dockTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dockTime.AutoSize = true;
+            this.dockTime.BackColor = System.Drawing.Color.Transparent;
             this.dockTime.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.dockTime.ForeColor = System.Drawing.Color.White;
-            this.dockTime.Location = new System.Drawing.Point(1179, 13);
+            this.dockTime.Location = new System.Drawing.Point(1183, 11);
             this.dockTime.Name = "dockTime";
             this.dockTime.Size = new System.Drawing.Size(69, 20);
             this.dockTime.TabIndex = 0;
             this.dockTime.Text = "00:00 PM";
             this.dockTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dockPanel
+            // 
+            this.dockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.dockPanel.Controls.Add(this.startButton);
+            this.dockPanel.Controls.Add(this.dockTime);
+            this.dockPanel.Controls.Add(this.openFormsPanel);
+            this.dockPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockPanel.Location = new System.Drawing.Point(0, 641);
+            this.dockPanel.Name = "dockPanel";
+            this.dockPanel.Size = new System.Drawing.Size(1264, 40);
+            this.dockPanel.TabIndex = 1;
+            // 
+            // startButton
+            // 
+            this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.startButton.BackColor = System.Drawing.Color.Transparent;
+            this.startButton.Image = global::SilverOS.Core.Properties.Resources.start;
+            this.startButton.ImageActive = null;
+            this.startButton.Location = new System.Drawing.Point(9, 0);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(30, 40);
+            this.startButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.startButton.TabIndex = 2;
+            this.startButton.TabStop = false;
+            this.startButton.Zoom = 10;
+            // 
+            // openFormsPanel
+            // 
+            this.openFormsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.openFormsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.openFormsPanel.Location = new System.Drawing.Point(45, 641);
+            this.openFormsPanel.Name = "openFormsPanel";
+            this.openFormsPanel.Size = new System.Drawing.Size(1132, 40);
+            this.openFormsPanel.TabIndex = 3;
+            this.openFormsPanel.WrapContents = false;
             // 
             // Desktop
             // 
@@ -80,6 +111,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.dockPanel.ResumeLayout(false);
             this.dockPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,7 +119,9 @@
         #endregion
 
         private System.Windows.Forms.Timer DockTimer;
-        private System.Windows.Forms.Panel dockPanel;
         private System.Windows.Forms.Label dockTime;
+        private System.Windows.Forms.Panel dockPanel;
+        private SilverOS.UI.SilverImageButton startButton;
+        private System.Windows.Forms.FlowLayoutPanel openFormsPanel;
     }
 }
