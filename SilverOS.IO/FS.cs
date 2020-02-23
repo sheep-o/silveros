@@ -3,7 +3,7 @@ using System.IO;
 
 namespace SilverOS.IO
 {
-    public class Directory
+    public class FS
     {
         private string systemDirectory = Environment.GetEnvironmentVariable("appdata").Replace("\\", "/") + "/SilverOS/drive/";
 

@@ -18,17 +18,17 @@ namespace SilverOS.Core
         public Desktop()
         {
             InitializeComponent();
-            fs = new Directory();
+            fs = new FS();
             processManager = new ProcessManager(this);
             settings = new SystemSettings();
         }
 
         public Dictionary<SilverImageButton, Form> dockForms = new Dictionary<SilverImageButton, Form>();
-        private static Directory fs;
+        private static FS fs;
         private static ProcessManager processManager;
         private static SystemSettings settings;
 
-        public static Directory GetFileSystem()
+        public static FS GetFileSystem()
         {
             return fs;
         }

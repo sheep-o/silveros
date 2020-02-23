@@ -39,9 +39,6 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\source\repos\ThunderRBX\Thunder\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
-    </Reference>
     <Reference Include="MetroSuite 2.0">
       <HintPath>..\..\..\source\repos\ThunderRBX\Thunder\bin\Debug\MetroSuite 2.0.dll</HintPath>
     </Reference>
@@ -80,7 +77,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
