@@ -33,7 +33,7 @@ namespace SilverOS.Core.Lua
             }
         }
 
-        public static void LoadFile(string path) 
+        public static void DoFile(string path) 
         {
             try
             {
