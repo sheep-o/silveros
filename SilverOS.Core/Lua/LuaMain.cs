@@ -9,21 +9,41 @@ namespace SilverOS.Core.Lua
 {
     class LuaMain
     {
-        LuaMain() 
+        public LuaMain() 
         {
-            
+            L["Controls"] = new Library.Controls();
+            L["Units"]    = new Library.Units();
+            L["Forms"]    = new Library.Forms();
+            L["FS"]       = new Library.FS();
+
+            DoFile("C:/FileManager.lua");
         }
 
         private static NLua.Lua L = new NLua.Lua();
-
-        public static void LoadString(string script) 
+        
+        public static void DoString(string script) 
         {
-            L.DoString(script);
+            try
+            {
+                L.DoString(script);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         public static void LoadFile(string path) 
         {
-            L.DoFile(path);
+            try
+            {
+                L.DoFile(path);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                System.Windows.Forms.Application.Exit();
+            }
         }
     }
 }

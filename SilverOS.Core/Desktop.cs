@@ -20,11 +20,14 @@ namespace SilverOS.Core
             InitializeComponent();
             fs = new FS();
             processManager = new ProcessManager(this);
-            settings = new SystemSettings();
+            doubleClickMenu = new DoubleClickMenu();
+            lua = new Lua.LuaMain();
         }
 
         public Dictionary<SilverImageButton, Form> dockForms = new Dictionary<SilverImageButton, Form>();
         private static FS fs;
+        private static Lua.LuaMain lua;
+
         private static ProcessManager processManager;
         private static SystemSettings settings;
 
