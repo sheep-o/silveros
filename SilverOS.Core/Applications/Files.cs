@@ -37,7 +37,6 @@ namespace SilverOS.Core.Applications
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-
             RefreshDirectory();
         }
 
@@ -56,13 +55,18 @@ namespace SilverOS.Core.Applications
 
             foreach (DirectoryInfo dir in root.GetDirectories())
             {
-                listView1.Items.Add(new ListViewItem(dir.Name, 0));
+                listView1.Items.Add(new ListViewItem(dir.Name, imageList.Images.IndexOfKey("folder")));
             }
 
             foreach (FileInfo file in root.GetFiles())
             {
-                if (file.Extension == ".txt")
-                    listView1.Items.Add(new ListViewItem(file.Name, 1));
+                int i;
+                string mime = Desktop.GetSettings().GetMimeByExtension(file.Extension.Substring(1));
+                if (mime != null)
+                    i = imageList.Images.IndexOfKey(mime);
+                else
+                    i = imageList.Images.IndexOfKey("file");
+                listView1.Items.Add(new ListViewItem(file.Name, i));
             }
         }
 
