@@ -20,16 +20,5 @@ namespace SilverOS.Core
             string realPath = silverPath.Replace("C:/", Environment.GetEnvironmentVariable("appdata").Replace("\\", "/") + "/SilverOS/files/Drives/C/");
             return realPath;
         }
-
-        public static Dictionary<string, string> ParseFile(string contents)
-        {
-            Dictionary<string, string> rows = new Dictionary<string, string>();
-            foreach (string row in contents.Split('\n'))
-            {
-                string[] columns = row.Split(',');
-                rows.Add(columns[0].Trim(), columns[1].Trim());
-            }
-            return rows;
-        }
     }
 }

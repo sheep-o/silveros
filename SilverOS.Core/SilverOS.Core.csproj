@@ -190,7 +190,9 @@
     <None Include="Resources\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mime.csv" />
+    <None Include="Resources\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\start.png" />
   </ItemGroup>
   <ItemGroup>

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
 using SilverOS.Core.Applications;
 using SilverOS.UI;
 
@@ -12,17 +10,22 @@ namespace SilverOS.Core
 {
     public class SystemSettings
     {
-        private Dictionary<string, string> mimeTypes = new Dictionary<string, string>();
+        private Dictionary<string, SilverForm> defaultApplications = new Dictionary<string, SilverForm>();
 
         public SystemSettings()
         {
-            mimeTypes = Utility.ParseFile(Properties.Resources.mime);
+            SetDefaultApplication(".txt", new Notes());
         }
 
-        public string GetMimeByExtension(string extension)
+        public void SetDefaultApplication(string extension, SilverForm app)
         {
-            if (!mimeTypes.ContainsKey(extension)) return null;
-            return mimeTypes[extension];
+            defaultApplications.Add(extension, app);
+        }
+
+        public SilverForm GetDefaultApplication(string extension)
+        {
+            if (!defaultApplications.ContainsKey(extension)) return null;
+            return defaultApplications[extension];
         }
     }
 }

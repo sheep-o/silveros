@@ -16,7 +16,7 @@ namespace SilverOS.Core.Lua
             L["Forms"]    = new Library.Forms();
             L["FS"]       = new Library.FS();
 
-            //DoFile("C:/FileManager.lua");
+            DoFile("C:/FileManager.lua");
         }
 
         private static NLua.Lua L = new NLua.Lua();

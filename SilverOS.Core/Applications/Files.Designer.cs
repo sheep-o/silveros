@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Files));
             this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.btnUp = new MetroSuite.MetroNavigationButton();
             this.directoryLocation = new MetroSuite.MetroTextbox();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // listView1
@@ -53,15 +53,6 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
-            // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "folder");
-            this.imageList.Images.SetKeyName(1, "image-x-generic");
-            this.imageList.Images.SetKeyName(2, "package-x-generic");
-            this.imageList.Images.SetKeyName(3, "text-x-generic");
             // 
             // btnUp
             // 
@@ -98,12 +89,19 @@
             this.directoryLocation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.directoryLocation.HideSelection = false;
             this.directoryLocation.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.directoryLocation.Location = new System.Drawing.Point(37, 32);
+            this.directoryLocation.Location = new System.Drawing.Point(37, 31);
             this.directoryLocation.Name = "directoryLocation";
             this.directoryLocation.PasswordChar = '\0';
             this.directoryLocation.Size = new System.Drawing.Size(696, 23);
             this.directoryLocation.TabIndex = 2;
             this.directoryLocation.KeyDown += new MetroSuite.MetroTextbox.KeyDownEventHandler(this.directoryLocation_KeyDown);
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "folder.png");
+            this.imageList.Images.SetKeyName(1, "txt.png");
             // 
             // Files
             // 
