@@ -109,7 +109,9 @@
             this.Text = "SilverOS";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Desktop_Load);
             this.DoubleClick += new System.EventHandler(this.Desktop_DoubleClick);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Desktop_KeyDown);
             this.dockPanel.ResumeLayout(false);
             this.dockPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startButton)).EndInit();

@@ -7,20 +7,25 @@ using NLua;
 
 namespace SilverOS.Core.Lua
 {
-    class LuaMain
+    static class LuaMain
     {
-        public LuaMain() 
-        {
-            L["Controls"] = new Library.Controls();
-            L["Units"]    = new Library.Units();
-            L["Forms"]    = new Library.Forms();
-            L["FS"]       = new Library.FS();
+        private static NLua.Lua L;
 
-            DoFile("C:/FileManager.lua");
+        public static void InitializeState() 
+        {
+            L = new NLua.Lua();
+            L["Controls"] = new Library.Controls();
+            L["System"] = new Library.SilverSystem();
+            L["Units"] = new Library.Units();
+            L["Forms"] = new Library.Forms();
+            L["FS"] = new Library.FS();
         }
 
-        private static NLua.Lua L = new NLua.Lua();
-        
+        public static NLua.Lua GetState() 
+        {
+            return L;
+        }
+
         public static void DoString(string script) 
         {
             try

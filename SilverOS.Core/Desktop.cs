@@ -21,12 +21,12 @@ namespace SilverOS.Core
             fs = new FS();
             processManager = new ProcessManager(this);
             doubleClickMenu = new DoubleClickMenu();
-            lua = new Lua.LuaMain();
+            this.Hide();
+            Lua.LuaMain.InitializeState();
         }
 
         public Dictionary<SilverImageButton, Form> dockForms = new Dictionary<SilverImageButton, Form>();
         private static FS fs;
-        private static Lua.LuaMain lua;
 
         private static ProcessManager processManager;
         private static DoubleClickMenu doubleClickMenu;
@@ -77,6 +77,19 @@ namespace SilverOS.Core
         private void Desktop_DoubleClick(object sender, EventArgs e)
         {
             new Applications.DoubleClickMenu().Show(this);
+        }
+
+        private void Desktop_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Desktop_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Shift && e.Control)
+            {
+                
+            }
         }
     }
 }
