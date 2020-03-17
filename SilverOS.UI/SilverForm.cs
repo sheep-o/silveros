@@ -1,5 +1,4 @@
-﻿using MaterialSkin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -14,8 +13,6 @@ namespace SilverOS.UI
     {
         [Browsable(false)]
         public int Depth { get; set; }
-        [Browsable(false)]
-        public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
         [Browsable(false)]
         public MouseState MouseState { get; set; }
         public new FormBorderStyle FormBorderStyle { get { return base.FormBorderStyle; } set { base.FormBorderStyle = value; } }
@@ -507,31 +504,31 @@ namespace SilverOS.UI
             bool showMin = MinimizeBox && ControlBox;
             bool showMax = MaximizeBox && ControlBox;
 
-            using (var formButtonsPen = new Pen(SkinManager.ACTION_BAR_TEXT_SECONDARY, 2))
+            if (showMin)
             {
-                if (showMin)
-                {
-                    if (_buttonState == ButtonState.MinOver)
-                        g.FillEllipse(HOVER_MIN_BUTTON_BRUSH, _minButtonBounds);
-                    else
-                        g.FillEllipse(MIN_BUTTON_BRUSH, _minButtonBounds);
-                }
+                int x = showMax ? _minButtonBounds.X : _maxButtonBounds.X;
+                int y = showMax ? _minButtonBounds.Y : _maxButtonBounds.Y;
 
-                if (showMax)
-                {
-                    if (_buttonState == ButtonState.MaxOver)
-                        g.FillEllipse(HOVER_MAX_BUTTON_BRUSH, _maxButtonBounds);
-                    else
-                        g.FillEllipse(MAX_BUTTON_BRUSH, _maxButtonBounds);
-                }
+                if (_buttonState == ButtonState.MinOver)
+                    g.FillEllipse(HOVER_MIN_BUTTON_BRUSH, x, y, _minButtonBounds.Width, _minButtonBounds.Height);
+                else
+                    g.FillEllipse(MIN_BUTTON_BRUSH, x, y, _minButtonBounds.Width, _minButtonBounds.Height);
+            }
 
-                if (ControlBox)
-                {
-                    if (_buttonState == ButtonState.XOver)
-                        g.FillEllipse(HOVER_X_BUTTON_BRUSH, _xButtonBounds);
-                    else
-                        g.FillEllipse(X_BUTTON_BRUSH, _xButtonBounds);
-                }
+            if (showMax)
+            {
+                if (_buttonState == ButtonState.MaxOver)
+                    g.FillEllipse(HOVER_MAX_BUTTON_BRUSH, _maxButtonBounds);
+                else
+                    g.FillEllipse(MAX_BUTTON_BRUSH, _maxButtonBounds);
+            }
+
+            if (ControlBox)
+            {
+                if (_buttonState == ButtonState.XOver)
+                    g.FillEllipse(HOVER_X_BUTTON_BRUSH, _xButtonBounds);
+                else
+                    g.FillEllipse(X_BUTTON_BRUSH, _xButtonBounds);
             }
 
             //Form title
@@ -559,5 +556,12 @@ namespace SilverOS.UI
             }
             return false;
         }
+    }
+
+    public enum MouseState
+    {
+        HOVER = 0,
+        DOWN = 1,
+        OUT = 2
     }
 }

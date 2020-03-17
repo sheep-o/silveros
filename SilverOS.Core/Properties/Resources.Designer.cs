@@ -73,9 +73,9 @@ namespace SilverOS.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap image0 {
+        internal static System.Drawing.Bitmap folder {
             get {
-                object obj = ResourceManager.GetObject("image0", resourceCulture);
+                object obj = ResourceManager.GetObject("folder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
