@@ -20,7 +20,6 @@ namespace SilverOS.Core
             InitializeComponent();
             fs = new FS();
             processManager = new ProcessManager(this);
-            doubleClickMenu = new DoubleClickMenu();
             lua = new Lua.LuaMain();
         }
 

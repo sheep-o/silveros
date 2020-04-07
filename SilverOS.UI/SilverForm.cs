@@ -159,6 +159,8 @@ namespace SilverOS.UI
             DoubleBuffered = true;
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
 
+            if (MinimumSize.IsEmpty) MinimumSize = new Size(150, 150);
+
             // This enables the form to trigger the MouseMove event even when mouse is over another control
             Application.AddMessageFilter(new MouseMessageFilter());
             MouseMessageFilter.MouseMove += OnGlobalMouseMove;
