@@ -89,6 +89,7 @@ namespace SilverOS.UI
         private const int MONITOR_DEFAULTTONEAREST = 2;
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto, Pack = 4)]
+        
         public class MONITORINFOEX
         {
             public int cbSize = Marshal.SizeOf(typeof(MONITORINFOEX));
@@ -116,6 +117,13 @@ namespace SilverOS.UI
             {
                 return bottom - top;
             }
+        }
+
+        private bool dark = false;
+        public bool Dark
+        {
+            get { return dark; }
+            set { dark = value; }
         }
 
         private enum ResizeDirection
@@ -479,11 +487,13 @@ namespace SilverOS.UI
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            this.TopMost = true;
+
             var g = e.Graphics;
             g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
-            g.Clear(Color.White);
+            g.Clear(this.BackColor);
             g.FillRectangle(DARK_STATUS_BAR_BRUSH, _statusBarBounds);
 
             using (var borderPen = new Pen(Color.FromArgb(31, 0, 0, 0), 1))

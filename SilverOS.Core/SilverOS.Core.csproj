@@ -38,8 +38,15 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\source\repos\ThunderRBX\Thunder\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="KeraLua, Version=1.0.26.0, Culture=neutral, PublicKeyToken=6a194c04b9c89217, processorArchitecture=MSIL">
       <HintPath>..\packages\KeraLua.1.0.26\lib\net45\KeraLua.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="MetroSuite 2.0">
       <HintPath>..\..\..\..\Downloads\MetroSuite 2.0\MetroSuite 2.0.dll</HintPath>
@@ -53,9 +60,10 @@
     <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -75,24 +83,19 @@
     <Compile Include="Applications\DoubleClickMenu.Designer.cs">
       <DependentUpon>DoubleClickMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\Files.cs">
+    <Compile Include="Applications\EditorTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\Files.Designer.cs">
-      <DependentUpon>Files.cs</DependentUpon>
+    <Compile Include="Applications\EditorTest.Designer.cs">
+      <DependentUpon>EditorTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\Notes.cs">
+    <Compile Include="Applications\FileManagerTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\Notes.Designer.cs">
-      <DependentUpon>Notes.cs</DependentUpon>
+    <Compile Include="Applications\FileManagerTest.Designer.cs">
+      <DependentUpon>FileManagerTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\Terminal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\Terminal.Designer.cs">
-      <DependentUpon>Terminal.cs</DependentUpon>
-    </Compile>
+    <Compile Include="AppRegister.cs" />
     <Compile Include="Desktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +117,7 @@
     <Compile Include="Lua\Library\Controls.cs" />
     <Compile Include="Lua\Library\Forms.cs" />
     <Compile Include="Lua\Library\FS.cs" />
+    <Compile Include="Lua\Library\SilverSystem.cs" />
     <Compile Include="Lua\Library\Units.cs" />
     <Compile Include="Lua\LuaMain.cs" />
     <Compile Include="Process.cs" />
@@ -131,11 +135,11 @@
     <EmbeddedResource Include="Applications\DoubleClickMenu.resx">
       <DependentUpon>DoubleClickMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\Files.resx">
-      <DependentUpon>Files.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\EditorTest.resx">
+      <DependentUpon>EditorTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\Notes.resx">
-      <DependentUpon>Notes.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\FileManagerTest.resx">
+      <DependentUpon>FileManagerTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ProcessViewer.resx">
       <DependentUpon>ProcessViewer.cs</DependentUpon>

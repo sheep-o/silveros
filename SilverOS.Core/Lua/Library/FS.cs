@@ -66,5 +66,19 @@ namespace SilverOS.Core.Lua.Library
             }
             return true;
         }
+
+        public string[] GetFiles(string path)
+        {
+            string[] files;
+            try
+            {
+                files = Directory.GetFiles(Utility.NormalizePath(path));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return files;
+        }
     }
 }
