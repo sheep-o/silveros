@@ -20,7 +20,6 @@ namespace SilverOS.Core
             InitializeComponent();
             fs = new FS();
             processManager = new ProcessManager(this);
-            doubleClickMenu = new DoubleClickMenu();
             this.Hide();
             Lua.LuaMain.InitializeState();
         }
@@ -29,7 +28,7 @@ namespace SilverOS.Core
         private static FS fs;
 
         private static ProcessManager processManager;
-        private static SystemSettings settings;
+        //private static SystemSettings settings;
 
         public static FS GetFileSystem()
         {
@@ -39,11 +38,6 @@ namespace SilverOS.Core
         public static ProcessManager GetProcessManager()
         {
             return processManager;
-        }
-
-        public static SystemSettings GetSettings()
-        {
-            return settings;
         }
 
         public void AddToDock(Form form)
@@ -66,8 +60,6 @@ namespace SilverOS.Core
                 Application.Exit();
 
             dockPanel.Show();
-
-            new Process("Files", new Files()).Start();
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)

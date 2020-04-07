@@ -44,10 +44,6 @@
     <Reference Include="KeraLua, Version=1.0.26.0, Culture=neutral, PublicKeyToken=6a194c04b9c89217, processorArchitecture=MSIL">
       <HintPath>..\packages\KeraLua.1.0.26\lib\net45\KeraLua.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
-    </Reference>
     <Reference Include="MetroSuite 2.0">
       <HintPath>..\..\..\..\Downloads\MetroSuite 2.0\MetroSuite 2.0.dll</HintPath>
     </Reference>
@@ -143,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ProcessViewer.resx">
       <DependentUpon>ProcessViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Applications\Terminal.resx">
-      <DependentUpon>Terminal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop.resx">
       <DependentUpon>Desktop.cs</DependentUpon>

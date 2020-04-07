@@ -14,7 +14,6 @@ namespace SilverOS.Core
 
         public SystemSettings()
         {
-            SetDefaultApplication(".txt", new Notes());
         }
 
         public void SetDefaultApplication(string extension, SilverForm app)
