@@ -16,7 +16,7 @@ namespace SilverOS.Core
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Init());
+            Application.Run(new Desktop());
         }
     }
 }

@@ -23,7 +23,7 @@ namespace SilverOS.Core
             processes.Add(process);
 
             if (process.GetMainForm() != null)
-                process.GetMainForm().Show(desktop); process.GetMainForm().TopMost = true; desktop.AddToDock(process.GetMainForm());
+                process.GetMainForm().Show(desktop); process.GetMainForm().TopMost = true;
         }
 
         public void StopProcess(Process process)
