@@ -165,6 +165,7 @@ namespace SilverOS.UI
             FormBorderStyle = FormBorderStyle.None;
             Sizable = true;
             DoubleBuffered = true;
+            TopMost = true;
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
 
             if (MinimumSize.IsEmpty) MinimumSize = new Size(150, 150);
@@ -487,13 +488,11 @@ namespace SilverOS.UI
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            this.TopMost = true;
-
             var g = e.Graphics;
             g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
-            g.Clear(this.BackColor);
+            g.Clear(BackColor);
             g.FillRectangle(DARK_STATUS_BAR_BRUSH, _statusBarBounds);
 
             using (var borderPen = new Pen(Color.FromArgb(31, 0, 0, 0), 1))
@@ -533,7 +532,6 @@ namespace SilverOS.UI
                     g.FillEllipse(X_BUTTON_BRUSH, _xButtonBounds);
             }
 
-            //Form title
             g.DrawString(Text, new Font("Segoe UI", 10f), PRIMARY_TEXT_WHITE_BRUSH, new Rectangle(14 / 2, 0, Width / 2, STATUS_BAR_HEIGHT + 2), new StringFormat { LineAlignment = StringAlignment.Center });
         }
     }

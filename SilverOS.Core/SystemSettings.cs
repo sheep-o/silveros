@@ -12,6 +12,8 @@ namespace SilverOS.Core
     {
         private Dictionary<string, SilverForm> defaultApplications = new Dictionary<string, SilverForm>();
 
+        public static readonly int RequestTimeout = 30000;
+
         public SystemSettings()
         {
         }

@@ -20,11 +20,10 @@ namespace SilverOS.Core
             InitializeComponent();
             fs = new FS();
             processManager = new ProcessManager(this);
-            this.Hide();
             Lua.LuaMain.InitializeState();
         }
-        private static FS fs;
 
+        private static FS fs;
         private static ProcessManager processManager;
         //private static SystemSettings settings;
 

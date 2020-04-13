@@ -48,7 +48,7 @@
             this.btnEndProcess.Location = new System.Drawing.Point(321, 432);
             this.btnEndProcess.Name = "btnEndProcess";
             this.btnEndProcess.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnEndProcess.RoundingArc = 31;
+            this.btnEndProcess.RoundingArc = 5;
             this.btnEndProcess.Size = new System.Drawing.Size(91, 31);
             this.btnEndProcess.TabIndex = 0;
             this.btnEndProcess.Text = "End Process";
@@ -115,6 +115,7 @@
             this.MinimumSize = new System.Drawing.Size(220, 200);
             this.Name = "ProcessViewer";
             this.Text = "Process Viewer";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ProcessViewer_Load);
             this.ResumeLayout(false);
 

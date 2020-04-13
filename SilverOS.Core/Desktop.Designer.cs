@@ -32,8 +32,8 @@
             this.DockTimer = new System.Windows.Forms.Timer(this.components);
             this.dockTime = new System.Windows.Forms.Label();
             this.dockPanel = new System.Windows.Forms.Panel();
-            this.openFormsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.startButton = new SilverOS.UI.SilverImageButton();
+            this.openFormsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.dockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startButton)).BeginInit();
             this.SuspendLayout();
@@ -70,17 +70,6 @@
             this.dockPanel.Size = new System.Drawing.Size(1264, 40);
             this.dockPanel.TabIndex = 1;
             // 
-            // openFormsPanel
-            // 
-            this.openFormsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.openFormsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.openFormsPanel.Location = new System.Drawing.Point(45, 641);
-            this.openFormsPanel.Name = "openFormsPanel";
-            this.openFormsPanel.Size = new System.Drawing.Size(1132, 40);
-            this.openFormsPanel.TabIndex = 3;
-            this.openFormsPanel.WrapContents = false;
-            // 
             // startButton
             // 
             this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -95,6 +84,17 @@
             this.startButton.TabStop = false;
             this.startButton.Visible = false;
             this.startButton.Zoom = 10;
+            // 
+            // openFormsPanel
+            // 
+            this.openFormsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.openFormsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.openFormsPanel.Location = new System.Drawing.Point(45, 641);
+            this.openFormsPanel.Name = "openFormsPanel";
+            this.openFormsPanel.Size = new System.Drawing.Size(1132, 40);
+            this.openFormsPanel.TabIndex = 3;
+            this.openFormsPanel.WrapContents = false;
             // 
             // Desktop
             // 

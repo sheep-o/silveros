@@ -48,8 +48,8 @@
             this.btnShutdown.Location = new System.Drawing.Point(12, 39);
             this.btnShutdown.Name = "btnShutdown";
             this.btnShutdown.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnShutdown.RoundingArc = 41;
-            this.btnShutdown.Size = new System.Drawing.Size(122, 41);
+            this.btnShutdown.RoundingArc = 100;
+            this.btnShutdown.Size = new System.Drawing.Size(122, 100);
             this.btnShutdown.Style = MetroSuite.Design.Style.Dark;
             this.btnShutdown.TabIndex = 5;
             this.btnShutdown.Text = "Shutdown";
@@ -71,8 +71,8 @@
             this.btnRestart.Location = new System.Drawing.Point(140, 39);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnRestart.RoundingArc = 41;
-            this.btnRestart.Size = new System.Drawing.Size(122, 41);
+            this.btnRestart.RoundingArc = 100;
+            this.btnRestart.Size = new System.Drawing.Size(122, 100);
             this.btnRestart.Style = MetroSuite.Design.Style.Dark;
             this.btnRestart.TabIndex = 6;
             this.btnRestart.Text = "Restart";
@@ -82,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 91);
+            this.ClientSize = new System.Drawing.Size(273, 150);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnShutdown);
             this.MaximizeBox = false;

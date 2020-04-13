@@ -48,7 +48,7 @@ namespace SilverOS.UI
             SizeMode = PictureBoxSizeMode.Zoom;
         }
 
-        protected override void OnMouseEnter(EventArgs e)
+        protected override void OnMouseClick(EventArgs e)
         {
             image = Image;
             if (imageActive != null)

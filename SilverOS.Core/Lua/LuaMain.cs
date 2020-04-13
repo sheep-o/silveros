@@ -19,6 +19,7 @@ namespace SilverOS.Core.Lua
             L["Units"] = new Library.Units();
             L["Forms"] = new Library.Forms();
             L["FS"] = new Library.FS();
+            L["Networking"] = new Library.Networking();
         }
 
         public static NLua.Lua GetState() 
