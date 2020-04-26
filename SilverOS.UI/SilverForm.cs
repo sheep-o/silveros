@@ -166,6 +166,7 @@ namespace SilverOS.UI
             Sizable = true;
             DoubleBuffered = true;
             TopMost = true;
+            Padding = new Padding(0, STATUS_BAR_HEIGHT, 0, 0);
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
 
             if (MinimumSize.IsEmpty) MinimumSize = new Size(150, 150);

@@ -1,11 +1,7 @@
 ﻿using NLua;
 using ScintillaNET;
-using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SilverOS.Core.Lua.Library
@@ -38,6 +34,8 @@ namespace SilverOS.Core.Lua.Library
         public ScintillaNET.Scintilla Scintilla(UI.SilverForm form)
         {
             ScintillaNET.Scintilla control = new ScintillaNET.Scintilla();
+
+            // sheep, what is this stupid
 
             var alphaChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Not sure what the next 3 lines are :/
             var numericChars = "0123456789";

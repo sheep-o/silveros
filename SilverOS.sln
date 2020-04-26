@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverOS.UI", "SilverOS.UI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverOS.Core", "SilverOS.Core\SilverOS.Core.csproj", "{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverOS.IO", "SilverOS.IO\SilverOS.IO.csproj", "{929A3B3C-94C1-40FA-ACBD-5CDA1F6D20E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverOS.IO", "SilverOS.IO\SilverOS.IO.csproj", "{929A3B3C-94C1-40FA-ACBD-5CDA1F6D20E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +19,8 @@ Global
 		{AEF0F246-33C0-43AD-BDB1-19A853326C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEF0F246-33C0-43AD-BDB1-19A853326C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEF0F246-33C0-43AD-BDB1-19A853326C84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}.Debug|Any CPU.Build.0 = Debug|x64
 		{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EAB1CAF-F585-4907-85EB-DA9576E1AD6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{929A3B3C-94C1-40FA-ACBD-5CDA1F6D20E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

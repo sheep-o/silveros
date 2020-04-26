@@ -9,22 +9,22 @@ namespace SilverOS.IO
 
         public string[] GetFiles(string path)
         {
-            return System.IO.Directory.GetFiles(systemDirectory + path);
+            return Directory.GetFiles(systemDirectory + path);
         }
 
         public string[] GetDirectories(string path)
         {
-            return System.IO.Directory.GetDirectories(systemDirectory + path);
+            return Directory.GetDirectories(systemDirectory + path);
         }
 
         public bool Exists(string path)
         {
-            return System.IO.Directory.Exists(systemDirectory + path);
+            return Directory.Exists(systemDirectory + path);
         }
 
         public void Delete(string path)
         {
-            System.IO.Directory.Delete(systemDirectory + path);
+            Directory.Delete(systemDirectory + path);
         }
     }
 }

@@ -21,6 +21,8 @@ namespace SilverOS.Core
             fs = new FS();
             processManager = new ProcessManager(this);
             Lua.LuaMain.InitializeState();
+
+            new Login().Show(this);
         }
 
         private static FS fs;
@@ -44,7 +46,7 @@ namespace SilverOS.Core
 
         private void Desktop_DoubleClick(object sender, EventArgs e)
         {
-            new DoubleClickMenu().ShowDialog(this);
+            new DoubleClickMenu().ShowDialog();
         }
 
         private void Desktop_KeyDown(object sender, KeyEventArgs e)
